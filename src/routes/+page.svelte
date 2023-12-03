@@ -1,10 +1,11 @@
 <script lang="ts">
-	import listings from '$lib/data/lilstings';
 	import { buildDateFromOffer } from '$lib/offerUtils';
+	import type { PageData } from './$types';
+	export let data: PageData;
 </script>
 
 <div class="contianer mx-auto px-10">
-	{#each listings as listing}
+	{#each data.listings as listing}
 		<div class="">
 			<h1>{listing.name}</h1>
 			<h2><a href={listing.location}>{listing.location}</a></h2>
