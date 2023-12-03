@@ -3,14 +3,16 @@
 	import { buildDateFromOffer } from '$lib/offerUtils';
 </script>
 
-<div class="contianer mx-auto px-10">
+<div class="contianer mx-auto px-5">
 	{#each listings as listing}
-		<div class="">
+		<div class="m-5 px-3 border">
 			<h1>{listing.name}</h1>
 			<h2><a href={listing.location}>{listing.location}</a></h2>
 			{#each listing.schedule as offer}
-				<h3>{buildDateFromOffer(offer)}</h3>
-				<h3>{offer.description}</h3>
+				<div class="p-3 border">
+					<h3>{buildDateFromOffer(offer)}</h3>
+					<h3>{offer.description}</h3>
+				</div>
 			{/each}
 			{#if listing.links?.length}
 				<!-- image holder -->
