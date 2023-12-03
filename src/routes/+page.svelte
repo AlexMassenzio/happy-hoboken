@@ -1,5 +1,5 @@
 <script lang="ts">
-	import listings from '$lib/data/lilstings';
+	import listings from '$lib/data/listings';
 	import { buildDateFromOffer } from '$lib/offerUtils';
 </script>
 
