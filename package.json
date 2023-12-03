@@ -12,7 +12,9 @@
 		"lint": "prettier --plugin-search-dir . --check . && eslint .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"test:integration": "playwright test",
-		"test:unit": "vitest"
+		"test:unit": "vitest",
+		"test:unit-ci": "npm run test:unit -- run",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.40.1",
@@ -33,7 +35,8 @@
 		"tslib": "^2.6.2",
 		"typescript": "^5.3.2",
 		"vite": "^4.5.0",
-		"vitest": "^0.32.4"
+		"vitest": "^0.32.4",
+		"husky": "^8.0.0"
 	},
 	"type": "module"
 }
