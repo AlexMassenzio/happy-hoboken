@@ -2,7 +2,13 @@
 export default {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	theme: {
-		extend: {}
+		extend: {
+			colors: {
+				periwinkle: '#41658A',
+				cerulean: '#2FCBEE',
+				seaGreen: '#018E42'
+			}
+		}
 	},
 	plugins: []
 };
