@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { buildDateFromOffer } from '$lib/offerUtils';
+	import Offer from '../lib/components/Offers/Offer.svelte';
 	import type { PageData } from './$types';
 	export let data: PageData;
 </script>
@@ -10,10 +10,7 @@
 			<h1>{listing.name}</h1>
 			<h2><a href={listing.location}>{listing.location}</a></h2>
 			{#each listing.schedule as offer}
-				<div class="p-3 border">
-					<h3>{buildDateFromOffer(offer)}</h3>
-					<h3>{offer.description}</h3>
-				</div>
+				<Offer {offer} />
 			{/each}
 			{#if listing.links?.length}
 				<!-- image holder -->
