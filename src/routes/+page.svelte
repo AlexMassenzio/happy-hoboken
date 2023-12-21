@@ -18,8 +18,12 @@
 			{#if listing.links?.length}
 				<!-- image holder -->
 				<div class="">
-					{#each listing.links as img}
-						<img alt="img" src={img} />
+					{#each listing.links as link}
+						{#if link.includes('.png')}
+							<img alt="img" src={link} />
+						{:else}
+							<a href={link} target="_blank">{link}</a>
+						{/if}
 					{/each}
 				</div>
 			{/if}
